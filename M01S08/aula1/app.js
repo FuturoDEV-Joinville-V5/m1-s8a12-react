@@ -1,4 +1,5 @@
-import { MENSAGEM } from "./extra.js";
+import { mensagem, mostraMensagem } from "./extra.js";
 
 console.log("RODANDO...");
-console.log(MENSAGEM);
+console.log(mensagem);
+mostraMensagem();

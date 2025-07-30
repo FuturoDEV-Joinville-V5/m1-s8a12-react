@@ -1,5 +1,5 @@
-const MENSAGEM = "Sou uma mensagem de outro arquivo";
+export const mensagem = "Sou uma mensagem de outro arquivo.";
 
-export {
-  MENSAGEM,
-};
+export function mostraMensagem() {
+  console.log("Outra mensagem do arquivo extra.");
+}
