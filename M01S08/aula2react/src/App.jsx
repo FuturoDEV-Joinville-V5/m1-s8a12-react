@@ -1,7 +1,7 @@
-import "./App.css";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  return <p>Olá, FuturoDEV! estou no App</p>;
+  return <HomePage />;
 }
 
 export default App;
