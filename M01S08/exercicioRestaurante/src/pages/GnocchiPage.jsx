@@ -1,4 +1,4 @@
-import PageSection from "../components/PageSection";
+import PageSection from "../components/PageSection/PageSection";
 
 function GnocchiPage() {
   return (
@@ -16,10 +16,10 @@ function GnocchiPage() {
           <li>Exibir 4 tipos:</li>
         </ul>
         <ol>
-          <li class="ql-indent-1">Gnocchi de Batata</li>
-          <li class="ql-indent-1">Gnocchi de Espinafre</li>
-          <li class="ql-indent-1">Gnocchi de Cenoura</li>
-          <li class="ql-indent-1">Gnocchi de Beterraba</li>
+          <li>Gnocchi de Batata</li>
+          <li>Gnocchi de Espinafre</li>
+          <li>Gnocchi de Cenoura</li>
+          <li>Gnocchi de Beterraba</li>
         </ol>
         <ul>
           <li>Cada item deve ter: nome, valor e imagem ilustrativa.</li>
@@ -32,10 +32,10 @@ function GnocchiPage() {
         </p>
         <ul>
           <li>Lista não ordenada com os seguintes molhos:</li>
-          <li class="ql-indent-1">Alla Puttanesca</li>
-          <li class="ql-indent-1">Al Pesto di Basilico</li>
-          <li class="ql-indent-1">Cacio e Pepe</li>
-          <li class="ql-indent-1">Alla Matriciana</li>
+          <li>Alla Puttanesca</li>
+          <li>Al Pesto di Basilico</li>
+          <li>Cacio e Pepe</li>
+          <li>Alla Matriciana</li>
         </ul>
       </div>
     </PageSection>

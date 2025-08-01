@@ -1,4 +1,4 @@
-import PageSection from "../components/PageSection";
+import PageSection from "../components/PageSection/PageSection";
 
 function HomePage() {
   return (

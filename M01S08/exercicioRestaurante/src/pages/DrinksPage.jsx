@@ -1,4 +1,4 @@
-import PageSection from "../components/PageSection";
+import PageSection from "../components/PageSection/PageSection";
 
 function DrinksPage() {
   return (
@@ -11,13 +11,13 @@ function DrinksPage() {
         <p>Requisitos:</p>
         <ul>
           <li>Categorias:</li>
-          <li class="ql-indent-1">
+          <li>
             <strong>Água</strong>
           </li>
-          <li class="ql-indent-1">
+          <li>
             <strong>Refrigerantes</strong>: Coca-Cola, Guaraná, Sprite
           </li>
-          <li class="ql-indent-1">
+          <li>
             <strong>Sucos</strong>: Morango, Laranja, Uva
           </li>
           <li>Cada item deve exibir: nome e valor</li>

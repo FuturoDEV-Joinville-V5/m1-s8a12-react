@@ -1,6 +1,6 @@
-import MenuContainer from "./MenuContainer";
-import MenuButton from "./MenuButton";
-import spaghettiLogo from "../assets/spaghetti-logo-32x32.png";
+import MenuContainer from "../MenuContainer/MenuContainer";
+import MenuButton from "../MenuButton/MenuButton";
+import spaghettiLogo from "../../assets/spaghetti-logo-32x32.png";
 
 import "./Header.css";
 
