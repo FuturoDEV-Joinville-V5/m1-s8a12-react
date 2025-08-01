@@ -8,17 +8,17 @@ aside,
 main,
 section,
 footer,
-p,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-li {
+p:not(.RichText p),
+a:not(.RichText a),
+h1:not(.RichText h1),
+h2:not(.RichText h2),
+h3:not(.RichText h3),
+h4:not(.RichText h4),
+h5:not(.RichText h5),
+h6:not(.RichText h6),
+ul:not(.RichText ul),
+ol:not(.RichText ol),
+li:not(.RichText li) {
   margin: 0;
   padding: 0;
   border: 0;
@@ -32,4 +32,12 @@ body,
   height: 100%;
   position: relative;
   background-color: antiquewhite;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }

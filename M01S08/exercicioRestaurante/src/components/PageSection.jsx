@@ -1,10 +1,12 @@
 import "./PageSection.css";
 
-function PageSection({ id, title, children }) {
+function PageSection({ id, title, className, hideTitle, children }) {
   return (
-    <section className="PageSection">
+    <section className={`PageSection ${className}`}>
       <div>
-        <h2 id={id}>{title}</h2>
+        <h2 id={id} className={hideTitle ? "hidden" : ""}>
+          {title}
+        </h2>
         {children}
       </div>
     </section>

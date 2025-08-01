@@ -6,6 +6,11 @@
 }
 
 .App main {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: calc(100vh - 48px);
   overflow-y: auto;
 }

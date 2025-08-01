@@ -1,4 +1,10 @@
 .Footer {
+  display: flex;
+  justify-content: center;
+}
+
+.Footer > div {
+  width: 100%;
+  max-width: 1024px;
   padding: 48px 8px;
-  text-align: center;
 }
