@@ -3,6 +3,7 @@ import Footer from "../src/components/Footer";
 import HomePage from "./pages/HomePage";
 import GnocchiPage from "./pages/GnocchiPage";
 import PastasPage from "./pages/PastasPage";
+import DrinksPage from "./pages/DrinksPage";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
         <HomePage />
         <GnocchiPage />
         <PastasPage />
+        <DrinksPage />
       </main>
       <Footer />
     </div>

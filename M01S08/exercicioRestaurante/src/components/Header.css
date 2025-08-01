@@ -24,11 +24,3 @@
   display: flex;
   justify-content: right;
 }
-
-.Header ul {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  list-style: none;
-  font-size: 14px;
-}

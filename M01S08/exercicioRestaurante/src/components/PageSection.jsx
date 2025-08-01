@@ -1,3 +1,5 @@
+import "./PageSection.css";
+
 function PageSection({ title, children }) {
   return (
     <section className="PageSection">

@@ -1,8 +1,10 @@
+import PageSection from "../components/PageSection";
+
 function GnocchiPage() {
   return (
-    <section className="GnocchiPage">
-      <p>Página Gnocchi</p>
-    </section>
+    <PageSection title="Gnocchi">
+      <p>lista gnocchi aqui</p>
+    </PageSection>
   );
 }
 

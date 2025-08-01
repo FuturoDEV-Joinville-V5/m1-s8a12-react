@@ -1,8 +1,10 @@
+import PageSection from "../components/PageSection";
+
 function HomePage() {
   return (
-    <section className="HomePage">
-      <p>Página Inicial</p>
-    </section>
+    <PageSection title="Início">
+      <p>lista início aqui</p>
+    </PageSection>
   );
 }
 
