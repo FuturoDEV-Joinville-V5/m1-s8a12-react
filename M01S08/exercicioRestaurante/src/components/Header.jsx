@@ -7,16 +7,18 @@ import "./Header.css";
 function Header() {
   return (
     <header className="Header">
-      <img src={spaghettiLogo} alt="Spaghetti Logo" />
-      <h1>Mamamia Massas</h1>
-      <nav>
-        <MenuContainer>
-          <MenuButton label="Início" page="home" />
-          <MenuButton label="Gnocchi" page="gnocchi" />
-          <MenuButton label="Pastas" page="pastas" />
-          <MenuButton label="Bebidas" page="drinks" />
-        </MenuContainer>
-      </nav>
+      <div>
+        <img src={spaghettiLogo} alt="Spaghetti Logo" />
+        <h1>Mamamia Massas</h1>
+        <nav>
+          <MenuContainer>
+            <MenuButton label="Início" page="home" />
+            <MenuButton label="Gnocchi" page="gnocchi" />
+            <MenuButton label="Pastas" page="pastas" />
+            <MenuButton label="Bebidas" page="drinks" />
+          </MenuContainer>
+        </nav>
+      </div>
     </header>
   );
 }

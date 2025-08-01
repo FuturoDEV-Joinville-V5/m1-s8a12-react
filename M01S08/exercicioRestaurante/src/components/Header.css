@@ -1,6 +1,13 @@
 .Header {
-  padding: 8px;
+  display: flex;
+  justify-content: center;
   background-color: rgb(40, 20, 20);
+}
+
+.Header > div {
+  width: 100%;
+  max-width: 1024px;
+  padding: 8px;
   color: #fff;
   display: flex;
   flex-direction: row;

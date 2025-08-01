@@ -1,7 +1,14 @@
 .PageSection {
   background-color: #fff;
-  padding: 8px;
+  display: flex;
+  justify-content: center;
   height: 600px;
+}
+
+.PageSection > div {
+  padding: 8px;
+  width: 100%;
+  max-width: 1024px;
 }
 
 .PageSection:nth-child(odd) {
