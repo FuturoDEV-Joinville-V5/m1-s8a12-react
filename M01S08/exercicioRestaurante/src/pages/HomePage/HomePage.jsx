@@ -1,5 +1,5 @@
-import PageSection from "../components/PageSection/PageSection";
-import reataurantPhoto from "../assets/fachada_restaurante_exemplo.jpeg";
+import PageSection from "../../components/PageSection/PageSection";
+import reataurantPhoto from "../../assets/fachada_restaurante_exemplo.jpeg";
 
 import "./HomePage.css";
 

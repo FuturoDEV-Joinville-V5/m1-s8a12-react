@@ -1,4 +1,4 @@
-import PageSection from "../components/PageSection/PageSection";
+import PageSection from "../../components/PageSection/PageSection";
 
 function GnocchiPage() {
   return (
