@@ -2,7 +2,7 @@ import Header from "../components/Header";
 
 function HomePage() {
   return (
-    <div>
+    <div className="HomePage">
       <Header />
       <p>Página Inicial</p>
     </div>

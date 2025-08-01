@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <h1>Mamamia Massas</h1>
       <nav>
-        <ul className="menuNav">
+        <ul>
           <li>
             <MenuButton label="Início" />
           </li>

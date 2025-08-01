@@ -22,3 +22,10 @@ li {
   border: 0;
   font-family: sans-serif;
 }
+
+body,
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}

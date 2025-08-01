@@ -1,10 +1,14 @@
 .header {
   padding: 8px;
-  background-color: brown;
-  color: antiquewhite;
+  background-color: rgb(40, 20, 20);
+  color: #fff;
 }
 
-.menuNav {
+.header h1 {
+  font-weight: normal;
+}
+
+.header ul {
   display: flex;
   gap: 8px;
   list-style: none;
