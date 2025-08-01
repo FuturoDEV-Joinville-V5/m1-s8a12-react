@@ -16,8 +16,8 @@ function App() {
         <GnocchiPage />
         <PastasPage />
         <DrinksPage />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import PageSection from "../components/PageSection";
 
 function GnocchiPage() {
   return (
-    <PageSection title="Gnocchi">
+    <PageSection id="gnocchi" title="Gnocchi">
       <p>lista gnocchi aqui</p>
     </PageSection>
   );

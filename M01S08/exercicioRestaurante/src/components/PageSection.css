@@ -1,4 +1,9 @@
 .PageSection {
   background-color: #fff;
   padding: 8px;
+  height: 600px;
+}
+
+.PageSection:nth-child(odd) {
+  background-color: #f8f8f8;
 }

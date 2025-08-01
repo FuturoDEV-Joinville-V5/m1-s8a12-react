@@ -4,3 +4,8 @@
   justify-content: left;
   align-items: stretch;
 }
+
+.App main {
+  height: calc(100vh - 48px);
+  overflow-y: auto;
+}

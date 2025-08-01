@@ -2,7 +2,7 @@ import PageSection from "../components/PageSection";
 
 function PastasPage() {
   return (
-    <PageSection title="Pastas">
+    <PageSection id="pastas" title="Pastas">
       <p>lista pastas aqui</p>
     </PageSection>
   );

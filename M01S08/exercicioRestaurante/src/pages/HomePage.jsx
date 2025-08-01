@@ -2,7 +2,7 @@ import PageSection from "../components/PageSection";
 
 function HomePage() {
   return (
-    <PageSection title="Início">
+    <PageSection id="home" title="Início">
       <p>lista início aqui</p>
     </PageSection>
   );

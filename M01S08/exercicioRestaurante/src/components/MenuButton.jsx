@@ -1,7 +1,9 @@
-function MenuButton({ label, href }) {
+import "./MenuButton.css";
+
+function MenuButton({ label, page }) {
   return (
-    <li>
-      <a href={href}>{label}</a>
+    <li className="MenuButton">
+      <a href={`#${page}`}>{label}</a>
     </li>
   );
 }

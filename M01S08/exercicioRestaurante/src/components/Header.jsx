@@ -11,10 +11,10 @@ function Header() {
       <h1>Mamamia Massas</h1>
       <nav>
         <MenuContainer>
-          <MenuButton label="Início" />
-          <MenuButton label="Gnocchi" />
-          <MenuButton label="Pastas" />
-          <MenuButton label="Bebidas" />
+          <MenuButton label="Início" page="home" />
+          <MenuButton label="Gnocchi" page="gnocchi" />
+          <MenuButton label="Pastas" page="pastas" />
+          <MenuButton label="Bebidas" page="drinks" />
         </MenuContainer>
       </nav>
     </header>

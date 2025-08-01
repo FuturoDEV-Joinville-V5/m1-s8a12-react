@@ -1,9 +1,9 @@
 import "./PageSection.css";
 
-function PageSection({ title, children }) {
+function PageSection({ id, title, children }) {
   return (
     <section className="PageSection">
-      <h2>{title}</h2>
+      <h2 id={id}>{title}</h2>
       {children}
     </section>
   );

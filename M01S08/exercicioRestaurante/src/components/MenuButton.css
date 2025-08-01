@@ -1,0 +1,9 @@
+.MenuButton a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.MenuButton a:hover {
+  text-decoration: underline;
+  color: white;
+}
