@@ -4,7 +4,9 @@ html,
 body,
 div,
 header,
+aside,
 main,
+section,
 footer,
 p,
 a,
@@ -23,9 +25,10 @@ li {
   font-family: sans-serif;
 }
 
+html,
 body,
 #root {
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }

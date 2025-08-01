@@ -1,5 +1,9 @@
 function MenuButton({ label, href }) {
-  return <a href={href}>{label}</a>;
+  return (
+    <li>
+      <a href={href}>{label}</a>
+    </li>
+  );
 }
 
 export default MenuButton;

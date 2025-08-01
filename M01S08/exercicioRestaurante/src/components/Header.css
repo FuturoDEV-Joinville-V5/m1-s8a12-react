@@ -1,15 +1,34 @@
-.header {
+.Header {
   padding: 8px;
   background-color: rgb(40, 20, 20);
   color: #fff;
-}
-
-.header h1 {
-  font-weight: normal;
-}
-
-.header ul {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.Header > img {
+  width: 32px;
+  height: 32px;
+}
+
+.Header h1 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.Header nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: right;
+}
+
+.Header ul {
+  display: flex;
+  flex-direction: row;
   gap: 8px;
   list-style: none;
+  font-size: 14px;
 }
