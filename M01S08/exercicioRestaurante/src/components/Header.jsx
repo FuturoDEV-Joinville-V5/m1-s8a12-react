@@ -4,17 +4,20 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <h1>Restaurante Massa</h1>
+      <h1>Mamamia Massas</h1>
       <nav>
-        <ul>
+        <ul className="menuNav">
           <li>
             <MenuButton label="Início" />
           </li>
           <li>
-            <MenuButton label="Sobre" />
+            <MenuButton label="Gnocchi" />
           </li>
           <li>
-            <MenuButton label="Contato" />
+            <MenuButton label="Pastas" />
+          </li>
+          <li>
+            <MenuButton label="Bebidas" />
           </li>
         </ul>
       </nav>

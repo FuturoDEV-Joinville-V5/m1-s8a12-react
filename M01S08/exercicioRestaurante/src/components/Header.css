@@ -1,0 +1,11 @@
+.header {
+  padding: 8px;
+  background-color: brown;
+  color: antiquewhite;
+}
+
+.menuNav {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
