@@ -3,11 +3,10 @@
   background-color: #fff;
   display: flex;
   justify-content: center;
-  height: 600px;
 }
 
 .PageSection > div {
-  padding: 8px;
+  padding: 16px;
   width: 100%;
   max-width: 1024px;
 }
