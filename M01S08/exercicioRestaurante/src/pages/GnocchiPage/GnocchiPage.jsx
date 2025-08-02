@@ -54,7 +54,14 @@ function GnocchiPage() {
           imgSrc={spinachGnocchiImg}
         />
       </CardGrid>
-      <SauceList />
+      <SauceList
+        sauces={[
+          "Alla Puttanesca",
+          "Al Pesto di Basilico",
+          "Cacio e Pepe",
+          "Alla Matriciana",
+        ]}
+      />
     </PageSection>
   );
 }

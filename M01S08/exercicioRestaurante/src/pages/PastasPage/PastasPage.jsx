@@ -1,7 +1,13 @@
 import PageSection from "../../components/PageSection/PageSection";
 import CardGrid from "../../components/CardGrid/CardGrid";
 import DishCard from "../../components/DishCard/DishCard";
-import SauceList from "../../components/SauceList/SauceList";
+
+import espagueteImg from "../../assets/massa_espaguete_exemplo.jpeg";
+import fettuccineImg from "../../assets/massa_fettuccine_exemplo.jpeg";
+import pappardelleImg from "../../assets/massa_pappardelle_exemplo.jpeg";
+import penneImg from "../../assets/massa_penne_exemplo.jpeg";
+import rigatoniImg from "../../assets/massa_rigatoni_exemplo.jpeg";
+import tagliatelleImg from "../../assets/massa_tagliatelle_exemplo.jpeg";
 
 /*
 Objetivo: Criar a seção de pastas utilizando cards e integrar com o componente de molhos.
@@ -25,32 +31,43 @@ function PastasPage() {
         <DishCard
           name="Espaguete"
           price={23}
-          //imgSrc={}
+          imgSrc={espagueteImg}
+          sauces={[
+            "Alla Puttanesca",
+            "Al Pesto di Basilico",
+            "Cacio e Pepe",
+            "Alla Matriciana",
+          ]}
         />
         <DishCard
           name="Tagliatelle"
           price={27}
-          //imgSrc={}
+          imgSrc={tagliatelleImg}
+          sauces={["Alla Puttanesca", "Alla Matriciana"]}
         />
         <DishCard
           name="Fettuccine"
           price={25}
-          //imgSrc={}
+          imgSrc={fettuccineImg}
+          sauces={["Alla Puttanesca", "Al Pesto di Basilico", "Cacio e Pepe"]}
         />
         <DishCard
           name="Penne"
           price={29}
-          //imgSrc={}
+          imgSrc={penneImg}
+          sauces={["Alla Puttanesca", "Cacio e Pepe"]}
         />
         <DishCard
           name="Rigatoni"
           price={25}
-          //imgSrc={}
+          imgSrc={rigatoniImg}
+          sauces={["Alla Matriciana"]}
         />
         <DishCard
           name="Pappardelle"
           price={29}
-          //imgSrc={}
+          imgSrc={pappardelleImg}
+          sauces={["Alla Puttanesca", "Alla Matriciana"]}
         />
       </CardGrid>
     </PageSection>

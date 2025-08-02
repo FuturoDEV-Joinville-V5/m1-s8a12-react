@@ -1,12 +1,15 @@
-function SauceList() {
+function SauceList({ sauces = [] }) {
+  if (!sauces.length) {
+    return null;
+  }
+
   return (
     <div className="SauceList">
-      <h3>Molhos</h3>
+      <h4>Molhos</h4>
       <ul>
-        <li>Alla Puttanesca</li>
-        <li>Al Pesto di Basilico</li>
-        <li>Cacio e Pepe</li>
-        <li>Alla Matriciana</li>
+        {sauces.map((sauce) => (
+          <li key={sauce}>{sauce}</li>
+        ))}
       </ul>
     </div>
   );
