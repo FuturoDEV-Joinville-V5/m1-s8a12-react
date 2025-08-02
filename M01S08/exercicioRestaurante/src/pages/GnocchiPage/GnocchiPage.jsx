@@ -32,7 +32,7 @@ Componente 2: Molhos
 function GnocchiPage() {
   return (
     <PageSection id="gnocchi" title="Gnocchi" className="GnocchiPage">
-      <CardGrid>
+      <CardGrid columns={2}>
         <DishCard
           name="Gnocchi de Batata"
           price={23}
