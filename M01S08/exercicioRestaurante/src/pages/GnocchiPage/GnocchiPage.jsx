@@ -1,4 +1,5 @@
 import PageSection from "../../components/PageSection/PageSection";
+import CardGrid from "../../components/CardGrid/CardGrid";
 import DishCard from "../../components/DishCard/DishCard";
 
 import potatoGnocchiImg from "../../assets/gnocchi_batata_exemplo.jpeg";
@@ -28,22 +29,28 @@ Componente 2: Molhos
 function GnocchiPage() {
   return (
     <PageSection id="gnocchi" title="Gnocchi" className="GnocchiPage">
-      <DishCard name="Gnocchi de Batata" price={23} imgSrc={potatoGnocchiImg} />
-      <DishCard
-        name="Gnocchi de Espinafre"
-        price={27}
-        imgSrc={beetrootGnocchiImg}
-      />
-      <DishCard
-        name="Gnocchi de Cenoura"
-        price={25}
-        imgSrc={carrotGnocchiImg}
-      />
-      <DishCard
-        name="Gnocchi de Beterraba"
-        price={29}
-        imgSrc={spinachGnocchiImg}
-      />
+      <CardGrid>
+        <DishCard
+          name="Gnocchi de Batata"
+          price={23}
+          imgSrc={potatoGnocchiImg}
+        />
+        <DishCard
+          name="Gnocchi de Espinafre"
+          price={27}
+          imgSrc={beetrootGnocchiImg}
+        />
+        <DishCard
+          name="Gnocchi de Cenoura"
+          price={25}
+          imgSrc={carrotGnocchiImg}
+        />
+        <DishCard
+          name="Gnocchi de Beterraba"
+          price={29}
+          imgSrc={spinachGnocchiImg}
+        />
+      </CardGrid>
     </PageSection>
   );
 }
