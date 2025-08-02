@@ -11,6 +11,10 @@
   max-width: 1024px;
 }
 
+.PageSection h2 {
+  margin-bottom: 16px;
+}
+
 .PageSection:nth-child(odd) {
   background-color: #f8f8f8;
 }

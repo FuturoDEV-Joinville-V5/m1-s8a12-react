@@ -1,11 +1,14 @@
 import PageSection from "../../components/PageSection/PageSection";
 import CardGrid from "../../components/CardGrid/CardGrid";
 import DishCard from "../../components/DishCard/DishCard";
+import SauceList from "../../components/SauceList/SauceList";
 
 import potatoGnocchiImg from "../../assets/gnocchi_batata_exemplo.jpeg";
 import beetrootGnocchiImg from "../../assets/gnocchi_beterraba_exemplo.jpeg";
 import carrotGnocchiImg from "../../assets/gnocchi_cenoura_exemplo.jpeg";
 import spinachGnocchiImg from "../../assets/gnocchi_espinafre_exemplo.jpeg";
+
+import "./GnocchiPage.css";
 
 /*
 Objetivo: Criar a seção de Gnocchis utilizando dois componentes:
@@ -51,6 +54,7 @@ function GnocchiPage() {
           imgSrc={spinachGnocchiImg}
         />
       </CardGrid>
+      <SauceList />
     </PageSection>
   );
 }
