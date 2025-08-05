@@ -18,7 +18,9 @@ function App() {
   return (
     <div>
       <p>Contagem total: {contador}</p>
-      <button onClick={somaUmComFuncao}>+1</button>
+      <button onClick={somaUm}>+1</button>
+      <button onClick={somaUmComFuncao}>+1s</button>
+      <button onClick={() => setContador(0)}>reset</button>
     </div>
   );
 }
