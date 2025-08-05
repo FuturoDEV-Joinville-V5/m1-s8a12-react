@@ -18,6 +18,10 @@ function App() {
     setContador((valorAtual) => valorAtual + 1);
   };
 
+  const alteraUsuario = (event) => {
+    setUsuario(event.target.value);
+  };
+
   return (
     <div>
       <p>Contagem total: {contador}</p>
@@ -25,6 +29,7 @@ function App() {
       <button onClick={somaUmComFuncao}>+1s</button>
       <button onClick={() => setContador(0)}>reset</button>
       <p>{usuario}</p>
+      <input type="text" value={usuario} onChange={alteraUsuario} />
     </div>
   );
 }
