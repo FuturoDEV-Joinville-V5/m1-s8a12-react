@@ -3,7 +3,10 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+  // hooks como useState precisam ser definidos na raiz do componente funcional
+  // evitando que sejam invocados dentro de outras funções internas ou blocos de código
   const [contador, setContador] = useState(0);
+  const [usuario, setUsuario] = useState("Romeu");
 
   // somando em cima da variavel contador
   const somaUm = () => {
@@ -21,6 +24,7 @@ function App() {
       <button onClick={somaUm}>+1</button>
       <button onClick={somaUmComFuncao}>+1s</button>
       <button onClick={() => setContador(0)}>reset</button>
+      <p>{usuario}</p>
     </div>
   );
 }
