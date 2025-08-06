@@ -3,15 +3,17 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  // cria os states para a aplicação
   const [entrada, setEntrada] = useState("");
-
   const [tarefas, setTarefas] = useState([]);
 
+  // define funções de storage
   const salvaNoLocalStorage = (listaParaSalvar) => {
     const listaEmJSON = JSON.stringify(listaParaSalvar);
     localStorage.setItem("tarefas", listaEmJSON);
   };
 
+  // cria funções de açoes
   const atualizaEntrada = (event) => {
     setEntrada(event.target.value);
   };
@@ -47,7 +49,7 @@ function App() {
     salvaNoLocalStorage(novoTarefas);
   };
 
-  // exemplo de uso de useEffect
+  // exemplo de uso de useEffect recuperando dados dsalvos
   useEffect(() => {
     const tarefasSalvasJSON = localStorage.getItem("tarefas");
     if (tarefasSalvasJSON) {
