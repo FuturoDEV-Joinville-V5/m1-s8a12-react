@@ -5,11 +5,12 @@ import "./App.css";
 function App() {
   const [entrada, setEntrada] = useState("");
 
-  const [tarefas, setTarefas] = useState([
-    { id: 1, description: "tarefa inicial exemplo", done: false },
-  ]);
+  const [tarefas, setTarefas] = useState([]);
 
-  const [contador, setContador] = useState(0);
+  const salvaNoLocalStorage = (listaParaSalvar) => {
+    const listaEmJSON = JSON.stringify(listaParaSalvar);
+    localStorage.setItem("tarefas", listaEmJSON);
+  };
 
   const atualizaEntrada = (event) => {
     setEntrada(event.target.value);
@@ -23,6 +24,7 @@ function App() {
     };
     const novoTarefas = [...tarefas, novaTarefa];
     setTarefas(novoTarefas);
+    salvaNoLocalStorage(novoTarefas);
     setEntrada("");
   };
 
@@ -34,6 +36,7 @@ function App() {
       return tarefa;
     });
     setTarefas(novoTarefas);
+    salvaNoLocalStorage(novoTarefas);
   };
 
   const apagaTarefa = (tarefaParaApagar) => {
@@ -41,13 +44,17 @@ function App() {
       (tarefa) => tarefa.id !== tarefaParaApagar.id
     );
     setTarefas(novoTarefas);
+    salvaNoLocalStorage(novoTarefas);
   };
 
-  // exemplo de uso de useEffect, mas poderia ser resilvido
-  // com o tarefas.length direto no JSX
+  // exemplo de uso de useEffect
   useEffect(() => {
-    setContador((prevState) => prevState + 1);
-  }, [tarefas]);
+    const tarefasSalvasJSON = localStorage.getItem("tarefas");
+    if (tarefasSalvasJSON) {
+      const tarefasSalvas = JSON.parse(tarefasSalvasJSON);
+      setTarefas(tarefasSalvas);
+    }
+  }, []);
 
   return (
     <div>
