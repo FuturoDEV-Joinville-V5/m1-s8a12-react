@@ -1,20 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Counter from "./components/Counter";
 
 import "./App.css";
 
 function App() {
-  const [contador, setContador] = useState(0);
-
-  useEffect(() => {
-    console.count("EXECUTOU_O_EFFECT");
-  }, []);
-
-  console.count("RODOU_LIFE_CYCLE");
+  const [mostraContador, setMostraContador] = useState(false);
 
   return (
     <div className="App">
-      <p>{contador}</p>
-      <button onClick={() => setContador(contador + 1)}>+1</button>
+      {mostraContador ? <Counter /> : null}
+      <button onClick={() => setMostraContador(!mostraContador)}>
+        Controle Contador
+      </button>
     </div>
   );
 }
