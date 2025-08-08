@@ -36,15 +36,17 @@ function App() {
   };
 
   const aoZerar = () => {
-    setRodando(false);
     setSegundos(0);
   };
 
   return (
     <div className="App">
       <p>{segundos}</p>
-      <button onClick={aoIniciar}>iniciar</button>
-      <button onClick={aoPausar}>pausar</button>
+      {rodando ? (
+        <button onClick={aoPausar}>pausar</button>
+      ) : (
+        <button onClick={aoIniciar}>iniciar</button>
+      )}
       <button onClick={aoZerar}>zerar</button>
     </div>
   );
