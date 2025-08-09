@@ -1,10 +1,10 @@
-import { useState } from "react";
 import NovaTarefa from "./components/NovaTarefa";
 import Tarefas from "./components/Tarefas";
+import useLocalStorage from "./hooks/useLocalStorage";
 import "./App.css";
 
 function App() {
-  const [tarefas, setTarefas] = useState([]);
+  const [tarefas, setTarefas] = useLocalStorage("tarefas", []);
 
   console.log({ tarefas });
 
