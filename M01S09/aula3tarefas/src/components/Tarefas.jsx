@@ -2,6 +2,11 @@ import "./Tarefas.css";
 
 function Coluna({ titulo = "", periodo = "", lista = [], aoCheckar }) {
   const tarefasPeriodo = lista.filter((t) => t.periodo === periodo);
+  const totalFeito = tarefasPeriodo.reduce(
+    (acc, t) => (t.feito ? acc + 1 : acc),
+    0
+  );
+  const totalPendente = tarefasPeriodo.length - totalFeito;
 
   return (
     <div>
@@ -18,6 +23,8 @@ function Coluna({ titulo = "", periodo = "", lista = [], aoCheckar }) {
           </li>
         ))}
       </ul>
+      <p>Pedentes: {totalPendente}</p>
+      <p>Feitas: {totalFeito}</p>
     </div>
   );
 }
