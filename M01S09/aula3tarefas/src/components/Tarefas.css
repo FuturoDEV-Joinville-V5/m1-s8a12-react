@@ -1,0 +1,23 @@
+.Tarefas {
+  display: flex;
+}
+
+.Tarefas > div {
+  flex-grow: 1;
+}
+
+.Tarefas ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Tarefas li {
+  display: flex;
+}
+
+.Tarefas p {
+  margin: 0;
+}

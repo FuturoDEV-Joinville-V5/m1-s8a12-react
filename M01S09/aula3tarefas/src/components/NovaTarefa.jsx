@@ -13,11 +13,11 @@ function NovaTarefa({ aoSalvar }) {
         id: Date.now(),
         descricao: valorDescricao,
         periodo: valorPeriodo,
+        feita: false,
       };
 
       aoSalvar(novaTarefa);
       descricaoRef.current.value = "";
-      alert("Tarefa criada!");
     } else {
       alert("Informe a descrição e o período da nova tarefa.");
     }
