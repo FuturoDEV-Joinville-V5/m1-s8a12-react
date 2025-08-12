@@ -1,4 +1,4 @@
-export function Typografy({
+export default function Typografy({
   variant = "body",
   text,
   className = "",

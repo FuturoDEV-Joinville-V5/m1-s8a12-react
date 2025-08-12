@@ -1,5 +1,5 @@
-import { Button } from "../atoms/Button";
-import { Typografy } from "../atoms/Typografy";
+import Button from "../atoms/Button";
+import Typografy from "../atoms/Typografy";
 
 export default function AlertMessage({ type, title, message, onClose }) {
   return (
