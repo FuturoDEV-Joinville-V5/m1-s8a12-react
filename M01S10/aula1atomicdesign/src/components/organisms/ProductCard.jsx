@@ -1,7 +1,7 @@
 import Typografy from "../atoms/Typografy";
 import Button from "../atoms/Button";
 
-export default function ProductCard({ product = {}, addToCart = () => {} }) {
+export default function ProductCard({ product = {}, onAddToCart = () => {} }) {
   const renderStars = (rating) => {
     let stars = "";
     for (let i = 0; i < rating; i += 1) {
@@ -14,7 +14,7 @@ export default function ProductCard({ product = {}, addToCart = () => {} }) {
     <div className="ProductCard">
       <Typografy text={product.name} />
       <div>{renderStars(product.rating)}</div>
-      <Button text="Adicinar ao carrinho" onClick={addToCart} />
+      <Button text="Adicinar ao carrinho" onClick={onAddToCart} />
     </div>
   );
 }
