@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
   const produtoExemplo = {
     name: "Alecrim",
+    rating: 4,
   };
 
   return (
