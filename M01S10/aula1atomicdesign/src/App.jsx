@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <p>Atomic Design</p>
-      <Button variant="danger" size="sm" text="Nosso Botão Atom" />
+      <Button size="sm" text="Nosso Botão Atom" />
     </div>
   );
 }
