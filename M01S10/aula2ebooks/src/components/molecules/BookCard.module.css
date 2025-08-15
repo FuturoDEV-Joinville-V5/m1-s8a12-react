@@ -1,0 +1,18 @@
+.BookCardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px orange solid;
+  border-radius: 8px;
+  gap: 6px;
+}
+
+.BookCardContainer p {
+  margin: 0;
+}
+
+.midSection {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
