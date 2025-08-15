@@ -35,7 +35,7 @@ function App() {
 
   return (
     <ThemeProvider theme={customTheme}>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <AppBar position="static">
         <Toolbar>
           <IconButton>
