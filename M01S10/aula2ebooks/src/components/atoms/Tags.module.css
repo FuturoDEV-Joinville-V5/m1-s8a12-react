@@ -1,0 +1,15 @@
+.TagsContainer {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.TagsContainer li {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: rgb(76, 40, 40);
+  color: beige;
+}
