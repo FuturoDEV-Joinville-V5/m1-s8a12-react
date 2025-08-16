@@ -6,8 +6,9 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import AtmButton from "./components/AtmButton";
 import "./App.css";
 
@@ -19,6 +20,21 @@ const getSystemTheme = () => {
 
 function App() {
   const [isDark, setIsDark] = useState(getSystemTheme());
+
+  const theme = useTheme();
+
+  // alguns exemplos de consulta de breakpoints
+  const isSmallerThanSm = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmOrUp = useMediaQuery(theme.breakpoints.up("sm"));
+  const isBetweenSmAndMd = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  const isSm = useMediaQuery(theme.breakpoints.only("sm"));
+
+  console.log({
+    isSmallerThanSm,
+    isSmOrUp,
+    isBetweenSmAndMd,
+    isSm,
+  });
 
   const customTheme = createTheme({
     palette: {
@@ -35,7 +51,7 @@ function App() {
 
   return (
     <ThemeProvider theme={customTheme}>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <AppBar position="static">
         <Toolbar>
           <IconButton>
@@ -45,6 +61,9 @@ function App() {
         </Toolbar>
       </AppBar>
       <br />
+      <Typography>
+        {isSmallerThanSm ? "Tela Pequena" : "Tela Grande"}
+      </Typography>
       <AtmButton onClick={() => setIsDark(!isDark)}>
         Alterna Modo Dark/Light
       </AtmButton>
