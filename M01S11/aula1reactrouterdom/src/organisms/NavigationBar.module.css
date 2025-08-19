@@ -1,0 +1,41 @@
+.container {
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  background-color: brown;
+  color: antiquewhite;
+}
+
+.title {
+  display: flex;
+  gap: 4px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.logo {
+  width: 16px;
+  height: 16px;
+}
+
+.navList {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.navList a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.navList a:hover,
+.navList a:focus {
+  text-decoration: underline;
+}

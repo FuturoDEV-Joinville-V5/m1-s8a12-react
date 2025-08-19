@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import NavigationBar from "./organisms/NavigationBar";
 import HomePage from "./pages/HomePage";
 import MoviesPage from "./pages/MoviesPage";
 import ContactPage from "./pages/ContactPage";
@@ -8,6 +9,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <NavigationBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
