@@ -15,4 +15,8 @@ body {
     background-color: green;
   }
 }
-  */
+*/
+
+.MuiGrid-root {
+  background-color: green;
+}

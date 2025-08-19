@@ -2,8 +2,10 @@ import { useState } from "react";
 import {
   AppBar,
   CssBaseline,
-  Toolbar,
+  Grid,
   IconButton,
+  Paper,
+  Toolbar,
   Typography,
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -19,7 +21,9 @@ const getSystemTheme = () => {
 };
 
 function App() {
-  const [isDark, setIsDark] = useState(getSystemTheme());
+  const preffersDark = useMediaQuery("(prefers-color-scheme: dark)");
+
+  const [isDark, setIsDark] = useState(preffersDark);
 
   const theme = useTheme();
 
@@ -34,6 +38,7 @@ function App() {
     isSmOrUp,
     isBetweenSmAndMd,
     isSm,
+    preffersDark,
   });
 
   const customTheme = createTheme({
@@ -64,6 +69,20 @@ function App() {
       <Typography>
         {isSmallerThanSm ? "Tela Pequena" : "Tela Grande"}
       </Typography>
+
+      <Grid container spacing={2}>
+        <Grid item size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+          1
+        </Grid>
+        <Grid item size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+          2
+        </Grid>
+        <Grid item size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+          3
+        </Grid>
+      </Grid>
+
+      <br />
       <AtmButton onClick={() => setIsDark(!isDark)}>
         Alterna Modo Dark/Light
       </AtmButton>
