@@ -16,6 +16,11 @@
   font-size: 16px;
 }
 
+.title a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
 .logo {
   width: 16px;
   height: 16px;
@@ -38,4 +43,8 @@
 .navList a:hover,
 .navList a:focus {
   text-decoration: underline;
+}
+
+.navList a.active {
+  color: orange;
 }
