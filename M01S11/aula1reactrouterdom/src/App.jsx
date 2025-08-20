@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
+        {/* criando uma rota dinamica */}
         <Route path="/movies/:id" element={<MovieDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
         {/* redirecionamento da rota /batata para a rota /movies */}
