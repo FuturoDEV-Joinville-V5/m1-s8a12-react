@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { batata } from "../AppContext";
+import { AppContext } from "../AppContext";
 
 const MOVIES_LIST = [
   {
@@ -60,7 +60,7 @@ const MOVIES_LIST = [
 ];
 
 function MoviesPage() {
-  const { theme, toggleTheme } = useContext(batata);
+  const { theme, toggleTheme } = useContext(AppContext);
 
   console.log("MoviesPage", { theme });
 
