@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { AppContext } from "./AppContext";
 import NavigationBar from "./organisms/NavigationBar";
 import HomePage from "./pages/HomePage";
 import MoviesPage from "./pages/MoviesPage";
@@ -8,6 +10,10 @@ import NotFoundPage from "./pages/NotFoundPage";
 import "./App.css";
 
 function App() {
+  const { theme } = useContext(AppContext);
+
+  console.log({ theme });
+
   return (
     <div className="App">
       <NavigationBar />
