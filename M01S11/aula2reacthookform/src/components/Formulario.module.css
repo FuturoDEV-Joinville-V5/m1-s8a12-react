@@ -1,0 +1,4 @@
+.caixaCampo {
+  display: flex;
+  flex-direction: column;
+}
