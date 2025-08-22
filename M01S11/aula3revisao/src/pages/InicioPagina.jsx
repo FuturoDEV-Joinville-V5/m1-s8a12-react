@@ -11,6 +11,10 @@ function InicioPage() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log("NOME MUDOU");
+  }, [nome]);
+
   console.log("RODOU LIFE CICLE");
 
   return (
