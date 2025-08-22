@@ -20,11 +20,12 @@ function InicioPage() {
     console.log("NOME MUDOU");
   }, [nome]);
 
-  console.log("RODOU LIFE CICLE", batataRef.current);
+  console.log("RODOU LIFE CICLE", batataRef.current.value);
 
   return (
     <div className="InicioPage">
-      <h1 ref={batataRef}>Revisao React</h1>
+      <h1>Revisao React</h1>
+      <input ref={batataRef} type="text" />
       <ConjuntoCampo
         rotulo="Nome"
         id="nome"
