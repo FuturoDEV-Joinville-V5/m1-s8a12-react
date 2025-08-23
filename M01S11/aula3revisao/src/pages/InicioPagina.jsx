@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import ConjuntoCampo from "../components/molecules/ConjuntoCampo";
 
 function InicioPage() {
   // maneira de persistir valores e monitorar mudanças
-  const [nome, setNome] = useState("");
+  //const [nome, setNome] = useState("");
+  const [nome, setNome] = useLocalStorage({ key: "nome", value: "" });
 
   // maneira de persistir valores sem monitorar mudanças
   // acessa ou altera valores pelo .current
