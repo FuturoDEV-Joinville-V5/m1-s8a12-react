@@ -1,0 +1,18 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: rgb(59, 37, 37);
+  color: #fff;
+}
+
+.Navbar h1 {
+  font-size: 16px;
+}
+
+.Navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 6px;
+}

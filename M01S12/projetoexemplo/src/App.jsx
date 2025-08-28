@@ -9,17 +9,14 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Busca Oficinas</h1>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/workshops" element={<WorkshopListPage />} />
-        <Route path="/workshops/new" element={<WorkshopDetailPage />} />
-        <Route path="/workshops/:id" element={<WorkshopDetailPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/dashboard" element={<DashboardPage />} />
+      <Route path="/workshops" element={<WorkshopListPage />} />
+      <Route path="/workshops/new" element={<WorkshopDetailPage />} />
+      <Route path="/workshops/:id" element={<WorkshopDetailPage />} />
+    </Routes>
   );
 }
 
