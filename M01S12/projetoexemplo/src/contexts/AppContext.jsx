@@ -1,8 +1,9 @@
 import { createContext, useState } from "react";
+import { fakeUsersData } from "./fakeUsersData";
 
 export const initialAppDataValue = {
   logedUser: null,
-  users: [],
+  users: fakeUsersData,
   workshops: [],
 };
 

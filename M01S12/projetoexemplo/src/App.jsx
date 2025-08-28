@@ -1,4 +1,6 @@
-import { Route, Routes } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { AppContext } from "./contexts/AppContext";
 import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
@@ -8,7 +10,22 @@ import WorkshopDetailPage from "./pages/WorkshopDetailPage";
 
 import "./App.css";
 
+const PUBLIC_PAGES = ["/", "/signup"];
+
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [appData] = useContext(AppContext);
+  console.log({ location });
+
+  useEffect(() => {
+    // verifica se não é uma página protegida e se usuário não logado
+    if (!PUBLIC_PAGES.includes(location.pathname) && !appData.logedUser) {
+      // redireciona para login
+      navigate("/");
+    }
+  }, [appData, location]);
+
   return (
     <>
       <Navbar />
