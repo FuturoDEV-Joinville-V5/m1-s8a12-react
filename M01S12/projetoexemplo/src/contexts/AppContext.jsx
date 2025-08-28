@@ -12,5 +12,9 @@ export const AppContext = createContext(initialAppDataValue);
 export function AppContextProvider({ children }) {
   const [appData, setAppData] = useState(initialAppDataValue);
 
-  return <AppContext value={[appData, setAppData]}>{children}</AppContext>;
+  const updateAppData = (newAppData) => {
+    setAppData((currentAppData) => ({ ...currentAppData, ...newAppData }));
+  };
+
+  return <AppContext value={[appData, updateAppData]}>{children}</AppContext>;
 }

@@ -7,7 +7,7 @@ import styles from "./Navbar.module.css";
 
 function Navbar() {
   const navigate = useNavigate();
-  const [appData, setAppData] = useContext(AppContext);
+  const [appData, updateAppData] = useContext(AppContext);
   const hasLogedUser = !!appData.logedUser;
 
   const handleGotoLogin = () => {
@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   const handleLogout = () => {
-    setAppData((currentAppData) => ({ ...currentAppData, logedUser: null }));
+    updateAppData({ logedUser: null });
     handleGotoLogin();
   };
 

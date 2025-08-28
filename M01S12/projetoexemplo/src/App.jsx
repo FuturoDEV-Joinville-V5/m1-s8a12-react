@@ -8,7 +8,7 @@ import DashboardPage from "./pages/DashboardPage";
 import WorkshopListPage from "./pages/WorkshopListPage";
 import WorkshopDetailPage from "./pages/WorkshopDetailPage";
 
-import "./App.css";
+import styles from "./App.module.css";
 
 const PUBLIC_PAGES = ["/", "/signup"];
 
@@ -20,7 +20,13 @@ function App() {
 
   useEffect(() => {
     // verifica se não é uma página protegida e se usuário não logado
-    if (!PUBLIC_PAGES.includes(location.pathname) && !appData.logedUser) {
+    if (appData.logedUser && PUBLIC_PAGES.includes(location.pathname)) {
+      // se usuário logado entra nas telas de login ou cadastro
+      // redireciona para dashboard
+      navigate("/dashboard");
+    }
+    if (!appData.logedUser && !PUBLIC_PAGES.includes(location.pathname)) {
+      // se usuário não logado entra nas telas protegidas
       // redireciona para login
       navigate("/");
     }
@@ -29,14 +35,16 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/workshops" element={<WorkshopListPage />} />
-        <Route path="/workshops/new" element={<WorkshopDetailPage />} />
-        <Route path="/workshops/:id" element={<WorkshopDetailPage />} />
-      </Routes>
+      <main className={styles.PageContainer}>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/workshops" element={<WorkshopListPage />} />
+          <Route path="/workshops/new" element={<WorkshopDetailPage />} />
+          <Route path="/workshops/:id" element={<WorkshopDetailPage />} />
+        </Routes>
+      </main>
     </>
   );
 }
