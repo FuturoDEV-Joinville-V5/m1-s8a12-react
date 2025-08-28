@@ -7,12 +7,37 @@
   color: #fff;
 }
 
+.LogoBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.LogoBox img {
+  width: 32px;
+  height: 32px;
+}
+
 .Navbar h1 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .Navbar ul {
   display: flex;
   list-style: none;
-  gap: 6px;
+  gap: 8px;
+}
+
+.Navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Navbar ul a:hover,
+.Navbar ul a:focus {
+  text-decoration: underline;
+}
+
+.Navbar button {
+  cursor: pointer;
 }
