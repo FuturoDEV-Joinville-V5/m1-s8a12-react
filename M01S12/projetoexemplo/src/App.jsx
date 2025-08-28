@@ -1,4 +1,5 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import DashboardPage from "./pages/DashboardPage";
@@ -9,14 +10,17 @@ import "./App.css";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/signup" element={<SignupPage />} />
-      <Route path="/dashboard" element={<DashboardPage />} />
-      <Route path="/workshops" element={<WorkshopListPage />} />
-      <Route path="/workshops/new" element={<WorkshopDetailPage />} />
-      <Route path="/workshops/:id" element={<WorkshopDetailPage />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/workshops" element={<WorkshopListPage />} />
+        <Route path="/workshops/new" element={<WorkshopDetailPage />} />
+        <Route path="/workshops/:id" element={<WorkshopDetailPage />} />
+      </Routes>
+    </>
   );
 }
 
