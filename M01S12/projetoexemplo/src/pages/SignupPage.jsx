@@ -83,9 +83,10 @@ function SignupPage() {
   const handleEmailChange = (event) => {
     const newEmail = event.target.value;
     const isValid = validateEmail(newEmail);
+    const isUsed = appData.users.find((u) => u.email === newEmail);
 
     addError({
-      email: !isValid ? "E-mail inválido." : null,
+      email: !isValid ? "E-mail inválido." : isUsed ? "Email em uso." : null,
     });
 
     setEmail(newEmail);
