@@ -1,0 +1,7 @@
+.ServiceCard {
+  display: flex;
+  padding: 8px;
+  border: 1px #000 solid;
+  border-radius: 4px;
+  cursor: pointer;
+}

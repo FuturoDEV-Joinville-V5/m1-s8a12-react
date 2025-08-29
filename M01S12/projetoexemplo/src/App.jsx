@@ -16,7 +16,6 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [appData] = useContext(AppContext);
-  console.log({ location });
 
   useEffect(() => {
     // verifica se não é uma página protegida e se usuário não logado
