@@ -1,4 +1,5 @@
 import { useContext, useRef } from "react";
+import { Link } from "react-router-dom";
 import { AppContext } from "../contexts/AppContext";
 
 import styles from "./LoginPage.module.css";
@@ -43,6 +44,7 @@ function LoginPage() {
           required
         />
         <button type="submit">Entrar</button>
+        <Link to="/signup">Cadastrar</Link>
       </form>
     </div>
   );
