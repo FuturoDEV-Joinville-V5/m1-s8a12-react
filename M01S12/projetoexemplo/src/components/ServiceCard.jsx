@@ -7,7 +7,7 @@ function ServiceCard({ label = "", workshops = [], onClick = () => {} }) {
       onClick={() => onClick({ label, workshops })}
     >
       <h3>{label}</h3>
-      <p>{workshops.length}</p>
+      <p className={styles.ServiceCount}>{workshops.length}</p>
     </li>
   );
 }

@@ -4,4 +4,14 @@
   border: 1px #000 solid;
   border-radius: 4px;
   cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ServiceCount {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
 }
