@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
-import { fakeUsersData } from "./fakeUsersData";
+import { fakeUsersData, fakeWorkshopsData } from "./fakeData";
 
 export const initialAppDataValue = {
   logedUser: null,
   users: fakeUsersData,
-  workshops: [],
+  workshops: fakeWorkshopsData,
 };
 
 export const AppContext = createContext(initialAppDataValue);
