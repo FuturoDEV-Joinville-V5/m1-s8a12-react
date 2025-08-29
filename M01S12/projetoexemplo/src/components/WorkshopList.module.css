@@ -1,0 +1,4 @@
+.WorkshopList {
+  display: flex;
+  flex-direction: column;
+}
