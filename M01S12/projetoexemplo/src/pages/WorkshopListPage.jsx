@@ -12,7 +12,7 @@ function WorkshopListPage() {
   return (
     <div className={styles.WorkshopListPage}>
       <h2>Suas Oficinas Cadastradas</h2>
-      <WorkshopList workshops={userWorkshops} />
+      <WorkshopList workshops={userWorkshops} allowEdit />
     </div>
   );
 }
