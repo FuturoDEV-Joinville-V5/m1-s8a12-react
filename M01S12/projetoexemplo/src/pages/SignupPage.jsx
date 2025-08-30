@@ -92,15 +92,55 @@ function SignupPage() {
     setEmail(newEmail);
   };
 
+  const handlePasswordChange = (event) => {
+    const newPassword = event.target.value;
+    const isValid = newPassword.length && newPassword === confirmPassword;
+
+    addError({
+      confirmPassword: !isValid
+        ? "Passwords não equivalem ou inválidos."
+        : null,
+    });
+
+    setPassword(newPassword);
+  };
+
+  const handleConfirmPasswordChange = (event) => {
+    const newConfirmPassword = event.target.value;
+    const isValid = password.length && password === newConfirmPassword;
+
+    addError({
+      confirmPassword: !isValid
+        ? "Passwords não equivalem ou inválidos."
+        : null,
+    });
+
+    setConfirmPassword(newConfirmPassword);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const userData = appData.users.find(
-      (u) => u.email === email && u.password === password
-    );
+    // verifica se tem algum erro
+    if (Object.values(errors).some((e) => e)) {
+      alert("Corrija os erros do formulário antes de cotiuar com o cadastro.");
+      return;
+    }
 
-    if (userData) {
-      updateAppData({ logedUser: userData });
+    const newUserData = {
+      name,
+      gender,
+      cpf,
+      birthday,
+      email,
+      password,
+    };
+
+    if (newUserData) {
+      updateAppData({
+        logedUser: newUserData,
+        users: [...appData.users, newUserData],
+      });
     }
   };
 
@@ -169,7 +209,7 @@ function SignupPage() {
           name="password"
           placeholder="Senha"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handlePasswordChange}
           required
         />
         <input
@@ -177,9 +217,10 @@ function SignupPage() {
           name="confirmPassword"
           placeholder="Confirmar Senha"
           value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
+          onChange={handleConfirmPasswordChange}
           required
         />
+        {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
         <button type="submit">Cadastrar</button>
         <Link to="/">Voltar</Link>
       </form>
