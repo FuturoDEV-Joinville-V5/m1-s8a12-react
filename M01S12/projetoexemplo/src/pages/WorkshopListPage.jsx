@@ -1,9 +1,18 @@
-import Navbar from "../components/Navbar";
+import { useContext } from "react";
+import { AppContext } from "../contexts/AppContext";
+import WorkshopList from "../components/WorkshopList";
+
+import styles from "./WorkshopListPage.module.css";
 
 function WorkshopListPage() {
+  const [appData] = useContext(AppContext);
+  const userId = appData.logedUser.id;
+  const userWorkshops = appData.workshops.filter((w) => w.userId === userId);
+
   return (
-    <div className="WorkshopListPage">
-      <h2>WorkshopListPage</h2>
+    <div className={styles.WorkshopListPage}>
+      <h2>Suas Oficinas Cadastradas</h2>
+      <WorkshopList workshops={userWorkshops} />
     </div>
   );
 }

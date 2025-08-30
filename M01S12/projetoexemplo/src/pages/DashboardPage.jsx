@@ -23,6 +23,7 @@ function DashboardPage() {
         workshops={appData.workshops}
         onServiceClick={handleServiceClick}
       />
+      <h2>Lista de Oficinas</h2>
       <WorkshopList workshops={filteredWorkshops} />
     </div>
   );
