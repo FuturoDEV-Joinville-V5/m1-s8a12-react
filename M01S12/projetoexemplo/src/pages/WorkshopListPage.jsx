@@ -6,7 +6,7 @@ import styles from "./WorkshopListPage.module.css";
 
 function WorkshopListPage() {
   const [appData] = useContext(AppContext);
-  const userId = appData.logedUser.id;
+  const userId = appData.logedUser?.id; // operador optional chaining (?.)
   const userWorkshops = appData.workshops.filter((w) => w.userId === userId);
 
   return (
