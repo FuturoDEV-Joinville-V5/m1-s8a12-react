@@ -128,6 +128,7 @@ function SignupPage() {
     }
 
     const newUserData = {
+      id: Date.now(), // numero de milissegundos desde 1/1/1970
       name,
       gender,
       cpf,
